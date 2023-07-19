@@ -14,6 +14,19 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+  
+  var thisHour = dayjs().format("H");
+  thisHour = 10; // for testing only
+
+  // Select all divs with hour data
+  var hourDivs = $('div').eq(0).children();
+
+  // go through each and change classes as needed
+  $.each(hourDivs, function(index) {
+    // https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
+    console.log($(this).attr("id"));
+    var divID = $(this).attr("id");
+  });
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
