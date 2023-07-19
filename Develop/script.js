@@ -16,7 +16,7 @@ $(function () {
   // current hour in 24-hour time?
   
   var thisHour = dayjs().format("H");
-  thisHour = 10; // for testing only
+  thisHour = 11; // for testing only
   var hourText = "hour-" + thisHour;
   console.log(hourText);
 
@@ -32,7 +32,7 @@ $(function () {
     // parse the id to get the hour
     // https://stackoverflow.com/questions/13068225/parsing-text-with-jquery
     console.log($(this));
-    var divHour = $.trim($(this).text().split("-")[0]);
+    var divHour = $.trim(divID.split("-")[1]);
     console.log("divHour: ", divHour);
     if (divHour < thisHour) {
       console.log(divHour, " is less than ", thisHour);
