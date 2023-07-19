@@ -29,20 +29,15 @@ $(function () {
 
     // parse the id to get the hour
     var divHour = parseInt($.trim(divID.split("-")[1]));
-    console.log(divHour, "type:", typeof divHour);
-    console.log(thisHour, "type:", typeof thisHour);
     
     if (divHour < thisHour) {
       $(this).addClass("past");
-      console.log("divHour < thisHour");
     }
     else if (divHour == thisHour) {
       $(this).addClass("present");
-      console.log("divHour == thisHour");
     }
     else if (divHour > thisHour) {
       $(this).addClass("future");
-      console.log("divHour > thisHour");
     }
   });
 
