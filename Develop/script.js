@@ -16,12 +16,8 @@ $(function () {
     localStorage.setItem(btnID, btnValue);
   });
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  
+  // Code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour.
   var thisHour = dayjs().format("H");
   thisHour = 11; // for testing only
 
@@ -30,11 +26,9 @@ $(function () {
 
   // go through each and change classes as needed
   $.each(hourDivs, function() {
-    // https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
     var divID = $(this).attr("id");
 
     // parse the id to get the hour
-    // https://stackoverflow.com/questions/13068225/parsing-text-with-jquery
     var divHour = $.trim(divID.split("-")[1]);
     
     if (divHour < thisHour) {
@@ -47,11 +41,9 @@ $(function () {
       $(this).addClass("future");
     }
   });
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
 
+  // Code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements.
   $.each(hourDivs, function() {
     var divID = $(this).attr("id");
     var storedItem = localStorage.getItem(divID);
@@ -59,8 +51,8 @@ $(function () {
       $(this).children().eq(1).val(storedItem);
     }
   });
-  //
-  // TODO: Add code to display the current date in the header of the page.
+
+  // Display the current date in the header of the page.
   var toDay = dayjs().format('dddd, MMMM D');
   $('#currentDay').text(toDay);
 });
