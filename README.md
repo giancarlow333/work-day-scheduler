@@ -24,15 +24,15 @@ THEN the saved events persist
 
 ## Mock-Up
 
-(TBD)
+The application should look like this:
+
+![An image showing the scheduler at 10 AM. The hours 9, 10, and 11 AM are visible, and shaded according to which is in the past, present, or future.](./Assets/scheduler_mockup.png)
 
 ## Deployed Application
 
 (TBD)
 
 ## Sources
-
-(TBD)
 
 * I consulted [this StackOverflow thread](https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery) on getting an object's id via jQuery.
 * I used the code from user Adil in [this StackOverflow thread](https://stackoverflow.com/questions/13068225/parsing-text-with-jquery) (with slight modifications) to parse the text in the id retrieved above.

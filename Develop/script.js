@@ -19,7 +19,7 @@ $(function () {
   // Code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour.
   var thisHour = dayjs().format("H");
-  thisHour = 11; // for testing only
+  //thisHour = 10; // for testing only
 
   // Select all divs with hour data
   var hourDivs = $('div').eq(0).children();
