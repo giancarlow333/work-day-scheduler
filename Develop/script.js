@@ -17,6 +17,8 @@ $(function () {
   
   var thisHour = dayjs().format("H");
   thisHour = 10; // for testing only
+  var hourText = "hour-" + thisHour;
+  console.log(hourText);
 
   // Select all divs with hour data
   var hourDivs = $('div').eq(0).children();
@@ -26,6 +28,24 @@ $(function () {
     // https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery
     console.log($(this).attr("id"));
     var divID = $(this).attr("id");
+
+    // parse the id to get the hour
+    // https://stackoverflow.com/questions/13068225/parsing-text-with-jquery
+    console.log($(this));
+    var divHour = $.trim($(this).text().split("-")[0]);
+    console.log("divHour: ", divHour);
+    if (divHour < thisHour) {
+      console.log(divHour, " is less than ", thisHour);
+      $(this).addClass("past");
+    }
+    else if (divHour == thisHour) {
+      console.log(divHour, " is equal to ", thisHour);
+      $(this).addClass("present");
+    }
+    else {
+      console.log(divHour, " is greater than ", thisHour);
+      $(this).addClass("future");
+    }
   });
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
