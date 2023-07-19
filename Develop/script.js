@@ -7,7 +7,6 @@ $(function () {
   // local storage.
   // Select all save buttons
   var saveBtns = $(".saveBtn");
-  console.log(saveBtns);
 
   // Add listener to each button to add item to localStorage
   saveBtns.on("click", function() {
