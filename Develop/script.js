@@ -17,7 +17,7 @@ $(function () {
 
   // Code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour.
-  var thisHour = dayjs().format("H");
+  var thisHour = parseInt(dayjs().format("H"));
   //thisHour = 10; // for testing only
 
   // Select all divs with hour data
@@ -28,8 +28,8 @@ $(function () {
     var divID = $(this).attr("id");
 
     // parse the id to get the hour
-    var divHour = $.trim(divID.split("-")[1]);
-    console.log(divID, "type:", typeof divID);
+    var divHour = parseInt($.trim(divID.split("-")[1]));
+    console.log(divHour, "type:", typeof divHour);
     console.log(thisHour, "type:", typeof thisHour);
     
     if (divHour < thisHour) {
