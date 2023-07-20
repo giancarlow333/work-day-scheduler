@@ -34,6 +34,7 @@ The deployed application is [here](https://giancarlow333.github.io/work-day-sche
 
 ## Sources
 
+* The datetime parsing code is from [Day.js](https://day.js.org/).
 * I consulted [this StackOverflow thread](https://stackoverflow.com/questions/3239598/how-can-i-get-the-id-of-an-element-using-jquery) on getting an object's id via jQuery.
 * I used the code from user Adil in [this StackOverflow thread](https://stackoverflow.com/questions/13068225/parsing-text-with-jquery) (with slight modifications) to parse the text in the id retrieved above.
 * I consulted [this StackOverflow thread](https://stackoverflow.com/questions/40791207/setting-and-getting-localstorage-with-jquery) about accessing local storage with jQuery.
